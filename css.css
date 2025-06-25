@@ -72,6 +72,14 @@
      animation: aparecer 2s ease-in-out;
   transition: transform 1s;
     }  
+    .container-3 {
+  max-width: 100%;
+  margin: 30px auto;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.4); 
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
  /*____________________________________________________________________________*/
 
 
@@ -104,6 +112,7 @@
         transform: scale(1);
      animation: aparecer 2s ease-in-out;
   transition: transform 1s; 
+  
     }
  .caixacardapio {
     width: 100%;
@@ -136,9 +145,10 @@
  }
  .dolado2 {
     display: flex;
-    gap: 20px;
+    gap: 75px;
     margin: 10px 0; 
     height: 250px;
+    justify-content: center;
 }
  .container-2 {
   max-width: 900px;
@@ -292,19 +302,59 @@ body {
         border: 2px solid rgb(0, 0, 0);
         border-radius: 40px;
         transform: scale(0.90);
-     animation: aparecer 2s ease-in-out;
-  transition: transform 1s;
+width: 400px;
+  border-radius: 40px;
+  display: block;
         
     } 
-    .fotoFood  {
-  width: 400px;
-  border-radius: 40px;
-  transition: transform 0.5s;
-  display: block;
-    }
+  
     .faixa0 {
     color: rgb(255, 206, 160);
 
     font-family: 'Arial', sans-serif, monospace;
     flex: auto;
     }
+
+
+
+.card {
+  position: relative;
+  width: 250px;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
